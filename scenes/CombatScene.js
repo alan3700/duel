@@ -34,7 +34,8 @@ class CombatScene extends Phaser.Scene {
     
         this.enemyHealth = this.enemy.health;
         this.turn = 'player';
-    
+
+    // Création des barres de vie
         // Ajouter les images du joueur et de l'ennemi
         this.playerImage = this.add.image(250, 400, 'player').setScale(0.5);
         this.enemyImage = this.add.image(1350, 400, this.enemy.spritekey).setScale(1.5);
@@ -53,11 +54,11 @@ class CombatScene extends Phaser.Scene {
         this.turnText = this.add.text(850, 150, "Player's Turn", { fontSize: '30px', fill: '#ff0', fontWeight: 'bold' }).setOrigin(0.5, 0);
     
         this.updateRoomInfo(); // Appel de la méthode pour afficher les infos sur la salle
-        this.createSpellButton(100, 100, 'Expelliarmus', Spells.Expelliarmus);
-        this.createSpellButton(100, 150, 'Fireball', Spells.Fireball);
-        this.createSpellButton(100, 200, 'Ice', Spells.Ice);
-        this.createSpellButton(100, 250, 'Lightning Strike', Spells.LightningStrike);
-        this.createSpellButton(100, 300, 'Healing Charm', Spells.HealingCharm);
+        this.createSpellButton(50, 550, 'Expelliarmus', Spells.Expelliarmus);
+        this.createSpellButton(200, 550, 'Fireball', Spells.Fireball);
+        this.createSpellButton(300, 550, 'Ice', Spells.Ice);
+        this.createSpellButton(380, 550, 'Lightning Strike', Spells.LightningStrike);
+        this.createSpellButton(550, 550, 'Healing Charm', Spells.HealingCharm);
     }
 
     // Méthode pour mettre à jour les informations sur la salle
